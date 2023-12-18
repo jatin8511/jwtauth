@@ -1,0 +1,199 @@
+export default function Register() {
+  return (
+    <section className="formParent">
+      <div className="formCard">
+        <h2>Account Register</h2>
+        <form onSubmit={formHandler}>
+          <div className="inputDiv">
+            <label htmlFor="username">Username</label>
+            <input onChange={inputsVal} value={userVal.username} type="text" name="username" id="username" />
+          </div>
+
+          <div className="inputDiv">
+            <label htmlFor="email">Email</label>
+            <input onChange={inputsVal} value={userVal.email} type="email" name="email" id="email" />
+          </div>
+
+          <div className="inputParentDiv">
+            <div className="inputDiv">
+              <label htmlFor="pass">Password</label>
+              <input onChange={inputsVal} value={userVal.pass} type="text" name="pass" id="pass" />
+            </div>
+            <div className="inputDiv">
+              <label htmlFor="conPass">Confirm Password</label>
+              <input onChange={inputsVal} value={userVal.conPass} type="conPass" name="conPass" id="conPass" />
+            </div>
+          </div>
+
+          <div className="parentBtn">
+            <input type="submit" value="Register" className="success" />
+          </div>
+        </form>
+      </div>
+    </section>
+  )
+}
+
+export default function Login() {
+  return (
+    <section className="formParent">
+      <div className="formCard">
+        <h2>Account Register</h2>
+        <form onSubmit={formHandler}>
+          <div className="inputDiv">
+            <label htmlFor="usernameAndEmail">Username or Email</label>
+            <input type="text" name="usernameAndEmail" id="usernameAndEmail" />
+          </div>
+
+          <div className="inputParentDiv">
+            <div className="inputDiv">
+              <label htmlFor="pass">Password</label>
+              <input type="text" name="pass" id="pass" />
+            </div>
+          </div>
+
+          <div className="parentBtn">
+            <input type="submit" value="Login" className="success" />
+          </div>
+        </form>
+      </div>
+    </section>
+  )
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --mainBg: #303443;
+    --success: #74e074;
+    --darkGray: #414141;
+}
+
+.success {
+    background-color: var(--success);
+}
+
+body {
+    background-color: var(--mainBg);
+    user-select: none;
+}
+
+/* ==================== */
+/*! Register Form  */
+
+.formParent {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formCard {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px black;
+}
+
+.formCard>h2 {
+    text-align: center;
+    background-color: black;
+    color: wheat;
+    padding: 10px 0;
+    border-radius: 10px 10px 0 0;
+}
+
+.formCard form {
+    width: 500px;
+    padding: 20px;
+}
+
+.formCard input {
+    padding: 3px;
+}
+
+.formCard label {
+    font-weight: bold;
+    margin: 0 0 5px 0;
+}
+
+.formCard label::after {
+    content: ":";
+    padding: 0 0 0 3px;
+}
+
+.inputDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.inputParentDiv {
+    display: flex;
+    justify-content: space-around;
+}
+
+.parentBtn {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0 0;
+}
+
+.parentBtn>input {
+    border: 2px solid var(--darkGray);
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 7px;
+}
+
+.parentBtn>input:active {
+    scale: .95;
+}
+
+/* ==================== */
+/*! Navigation */
+
+nav {
+    background-color: var(--darkGray);
+    color: white;
+    padding: 5px 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav h2 {
+    font-size: 20px;
+}
+
+/* ==================== */
+/*! message component */
+
+.messageParent {
+    position: fixed;
+    top: 33px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+    background-color: rgba(94, 43, 43, 0.448);
+    color: white;
+}
+
+.defaultParentComponent {
+    position: relative;
+}
+
+.none {
+    display: none;
+}
+
+.block {
+    display: block;
+}
