@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  /* --mainBg: #303443; */
+  --mainBg: black;
+  --white: white;
+  --black: black;
+  --goldLight: wheat;
+  --goldDark: #ecad38;
+  --darkGray: #414141;
+  --shadowWhite: rgba(255, 255, 255, 0.345);
+  --shadowGray: rgba(128, 128, 128, 0.5);
+}
+
+body {
+  background-color: var(--mainBg);
+  user-select: none;
+}
+
+main {
+  padding: 60px 10px 10px 10px;
+  color: var(--white);
+}
+
+a {
+  color: var(--white);
+}
+
+.active {
+  box-shadow: 2px 2px 4px var(--shadowWhite),
+    inset 2px 2px 4px var(--shadowWhite);
+}
+
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+/* ==================== */
+/*! Register Form  */
+
+.formParent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 20%;
+  left: 35%;
+}
+
+.formCard {
+  background-color: var(--mainBg);
+  color: var(--white);
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px var(--shadowGray),
+    inset 3px 3px 5px var(--shadowGray);
+}
+
+.formCard>h2 {
+  text-align: center;
+  background-color: var(--darkGray);
+  color: var(--goldDark);
+  padding: 10px 0;
+  border-radius: 10px 10px 0 0;
+}
+
+.formCard form {
+  width: 500px;
+  padding: 20px;
+}
+
+.formCard input {
+  padding: 5px;
+  border-radius: 4px;
+  border: none;
+  background-color: var(--mainBg);
+  color: var(--white);
+  box-shadow: 2px 2px 3px var(--shadowGray),
+    inset 2px 2px 3px var(--shadowGray);
+  outline: none;
+}
+
+.formCard label {
+  font-weight: bold;
+  margin: 0 0 5px 0;
+}
+
+.formCard label::after {
+  content: ":";
+  padding: 0 0 0 3px;
+}
+
+.inputDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.inputParentDiv {
+  display: flex;
+  justify-content: space-around;
+}
+
+.parentBtn {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 0 0;
+}
+
+.parentBtn>input {
+  border: none;
+  background-color: var(--mainBg);
+  color: var(--goldDark);
+  box-shadow: 2px 2px 3px var(--shadowGray),
+    inset 2px 2px 3px var(--shadowGray);
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 7px;
+}
+
+.parentBtn>input:active {
+  scale: .95;
+}
+
+.formParent .avatar label {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.formParent .avatar img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.formParent .avatar input[type='file'] {
+  display: none;
+}
+
+/* ==================== */
+/*! Navigation */
+
+nav {
+  background-color: black;
+  color: var(--white);
+  padding: 10px 50px 12px 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--darkGray);
+}
+
+nav h2 {
+  font-size: 20px;
+  color: var(--goldLight);
+}
+
+.authNav {
+  display: flex;
+  align-items: center;
+}
+
+.authNav ul {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 50px;
+}
+
+.authNav ul li {
+  list-style: none;
+  margin: 0 20px;
+}
+
+.authNav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 7px;
+}
+
+.headingAndLogo {
+  display: flex;
+  align-items: baseline;
+}
+
+.navBtnParent {
+  position: relative;
+}
+
+.navBtn {
+  color: var(--goldDark);
+  background-color: var(--mainBg);
+  padding: 5px 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px var(--shadowWhite),
+    inset 2px 2px 3px var(--shadowWhite);
+  cursor: pointer;
+}
+
+.navBtn:active {
+  scale: .95;
+}
+
+.navBtnContent {
+  position: absolute;
+  bottom: -80px;
+  border-radius: 10px;
+  background-color: var(--mainBg);
+  box-shadow: 2px 2px 3px var(--shadowGray),
+    inset 2px 2px 3px var(--shadowGray);
+  width: 100%;
+  padding: 10px;
+}
+
+.navBtnContent ul li {
+  list-style: none;
+  text-align: center;
+}
+
+.navBtnContent ul li:first-child {
+  margin-bottom: 7px;
+}
+
+.navBtnContent ul li a {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: bold;
+}
+
+.navBtnContent ul li:active {
+  scale: .95;
+}
+
+/* ==================== */
+/*! page components */
+
+.userCard {
+  width: fit-content;
+  box-shadow: 3px 3px 3px var(--shadowWhite),
+    inset 3px 3px 3px var(--shadowWhite);
+  border-radius: 10px;
+}
+
+.userCardHeading {
+  background-color: var(--darkGray);
+  color: var(--goldDark);
+  border-radius: 10px 10px 0 0;
+  padding: 10px;
+}
+
+.userCard img {
+  border-radius: 50%;
+}
+
+.cardInformation {
+  padding: 10px;
+}
+
+.cardInformation p {
+  font-size: 25px;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 10px 0;
+}
